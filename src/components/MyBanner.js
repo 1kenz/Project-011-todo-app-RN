@@ -12,23 +12,23 @@ import {
 
 const MyBanner = (props) => {
   return (
-    <View style={styles.todo}>
-      <Text>{props.todo}</Text>
+    <View>
+      <Text style={styles.todo}>{props.todo}</Text>
+      {/* <Text style={styles.text}>{props.isDone}</Text> */}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   todo: {
-    textAlign: "center",
+    // textAlign: "center",
     justifyContent: "center",
     backgroundColor: "#CFD8DC",
     borderRadius: 5,
     margin: 10,
     padding: 5,
+    color: "black"
   },
-  todo: {},
-  text: {},
 });
 
 export default MyBanner;

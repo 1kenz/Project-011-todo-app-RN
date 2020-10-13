@@ -1,6 +1,6 @@
 /* eslint-disable quotes */
 /* eslint-disable react-native/no-inline-styles */
-import React from "react";
+import React, { useState } from "react";
 import {
   SafeAreaView,
   StyleSheet,
@@ -12,12 +12,29 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-// import MyBanner from "./src/components/MyBanner";
+import MyBanner from "./components/MyBanner";
+
+const todos = [
+  {
+    id: 0,
+    todo: "Ev temizlenecek",
+    isDone: false,
+  },
+  {
+    id: 1,
+    todo: "Alışveriş yapılacak",
+    isDone: false,
+  },
+  {
+    id: 2,
+    todo: "Araba yıkanacak",
+    isDone: false,
+  },
+];
 
 const App = () => {
-  var todos = [1, 2];
+
   var todo_num = todos.length;
-  // const onPress = "";
 
   return (
     <SafeAreaView style={[styles.container, { flex: 1 }]}>
@@ -26,17 +43,18 @@ const App = () => {
         <Text style={[styles.todo_count]}>{todo_num}</Text>
       </View>
       <View style={{ flex: 7 }}>
-        <View style={[styles.todos, {}]}>
-        </View>
+        {todos.map((item) => {
+          return (<MyBanner todo={item.todo}
+          // isDone={item.isDone} 
+          />)
+        })}
       </View>
 
       <View style={{ flex: 2 }}>
         <View style={styles.bottom_container}>
-          <TextInput
-            style={styles.textInput}
-          />
-          <TouchableOpacity style={styles.todo_add_button}>
-
+          <TextInput style={styles.textInput} />
+          <TouchableOpacity
+            style={styles.todo_add_button}>
             <Text style={styles.button_text}>ADD TODO</Text>
           </TouchableOpacity>
         </View>
@@ -70,6 +88,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 10,
     padding: 7,
+    color: "black"
   },
   bottom_container: {
     textAlign: "center",
