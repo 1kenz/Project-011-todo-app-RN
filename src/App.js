@@ -12,17 +12,12 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import MyBanner from "./src/components/MyBanner";
+// import MyBanner from "./src/components/MyBanner";
 
 const App = () => {
-  var todos = [
-    {
-      id: 0,
-      todo: "Ev temizlenecek",
-    },
-  ];
+  var todos = [1, 2];
   var todo_num = todos.length;
-  const onPress = "";
+  // const onPress = "";
 
   return (
     <SafeAreaView style={[styles.container, { flex: 1 }]}>
@@ -32,8 +27,6 @@ const App = () => {
       </View>
       <View style={{ flex: 7 }}>
         <View style={[styles.todos, {}]}>
-          <MyBanner />
-          {/* <Text>{onPress}</Text> */}
         </View>
       </View>
 
@@ -41,15 +34,9 @@ const App = () => {
         <View style={styles.bottom_container}>
           <TextInput
             style={styles.textInput}
-          // onChangeText={(value) => this.setState({ password: value })}
-          // value={this.state.password}
           />
           <TouchableOpacity style={styles.todo_add_button}>
-            {/* // onPress={() => {
-            //   if (this.state.username.localeCompare('demo') != 0) {
-            //     ToastAndroid.show('Invalid UserName', ToastAndroid.SHORT);
-            //     return;
-            //   } > */}
+
             <Text style={styles.button_text}>ADD TODO</Text>
           </TouchableOpacity>
         </View>
