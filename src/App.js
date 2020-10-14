@@ -35,6 +35,7 @@ const todos = [
 const App = () => {
 
   var todo_num = todos.length;
+  
 
   return (
     <SafeAreaView style={[styles.container, { flex: 1 }]}>
