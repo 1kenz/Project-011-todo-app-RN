@@ -15,77 +15,76 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-const todo_list = [
-  {
-    key: 0,
-    todo: "Ev temizlenecek",
-    isDone: false,
-  },
-  {
-    key: 1,
-    todo: "Alışveriş yapılacak",
-    isDone: false,
-  },
-  {
-    key: 2,
-    todo: "Araba yıkanacak",
-    isDone: false,
-  },
-  {
-    key: 3,
-    todo: "React Native çalışılacak",
-    isDone: false,
-  },
-  {
-    key: 4,
-    todo: "CSS tekrar edilecek",
-    isDone: false,
-  },
-  {
-    key: 5,
-    todo: "HTML tekrar edilecek",
-    isDone: false,
-  },
-  {
-    key: 6,
-    todo: "Java Script tekrar edilecek",
-    isDone: false,
-  },
-  {
-    key: 7,
-    todo: "Python tekrar edilecek",
-    isDone: false,
-  },
-  {
-    key: 8,
-    todo: "Projelere bakılacak",
-    isDone: false,
-  },
-  {
-    key: 9,
-    todo: "Makale yazılacak",
-    isDone: false,
-  },
-  {
-    key: 10,
-    todo: "Linkedin e bakılacak",
-    isDone: false,
-  },
-  {
-    key: 11,
-    todo: "GitHub a bakılacak",
-    isDone: false,
-  },
-  {
-    key: 12,
-    todo: "CodeChallenge lara bakılacak",
-    isDone: false,
-  },
-];
-// import MyBanner from "./components/MyBanner";
-
 const App = () => {
-  const [todos, setTodos] = useState(todo_list);
+
+  const [todos, setTodos] = useState([
+    {
+      key: 0,
+      todo: "Ev temizlenecek",
+      isDone: false,
+    },
+    {
+      key: 1,
+      todo: "Alışveriş yapılacak",
+      isDone: false,
+    },
+    {
+      key: 2,
+      todo: "Araba yıkanacak",
+      isDone: false,
+    },
+    {
+      key: 3,
+      todo: "React Native çalışılacak",
+      isDone: false,
+    },
+    {
+      key: 4,
+      todo: "CSS tekrar edilecek",
+      isDone: false,
+    },
+    {
+      key: 5,
+      todo: "HTML tekrar edilecek",
+      isDone: false,
+    },
+    {
+      key: 6,
+      todo: "Java Script tekrar edilecek",
+      isDone: false,
+    },
+    {
+      key: 7,
+      todo: "Python tekrar edilecek",
+      isDone: false,
+    },
+    {
+      key: 8,
+      todo: "Projelere bakılacak",
+      isDone: false,
+    },
+    {
+      key: 9,
+      todo: "Makale yazılacak",
+      isDone: false,
+    },
+    {
+      key: 10,
+      todo: "Linkedin e bakılacak",
+      isDone: false,
+    },
+    {
+      key: 11,
+      todo: "GitHub a bakılacak",
+      isDone: false,
+    },
+    {
+      key: 12,
+      todo: "CodeChallenge lara bakılacak",
+      isDone: false,
+    },
+  ]);
+  // const [update, setUpdate] = useState(todo_list);
 
   const [input, setInput] = useState("");
 
@@ -131,11 +130,7 @@ const App = () => {
             style={styles.textInput} />
           <KeyboardAvoidingView>
             <TouchableOpacity
-              // onPress={() => {
-              //   return (
-
-              //   )
-              // }}
+              // onPress={addTodos}
               style={styles.todo_add_button}>
               <Text style={styles.button_text}>ADD TODO</Text>
             </TouchableOpacity>
