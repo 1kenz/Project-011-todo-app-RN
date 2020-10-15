@@ -12,7 +12,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import MyBanner from "./components/MyBanner";
+import MyBanner from "./components/Header";
 
 const todos = [
   {
@@ -35,7 +35,7 @@ const todos = [
 const App = () => {
 
   var todo_num = todos.length;
-  
+
 
   return (
     <SafeAreaView style={[styles.container, { flex: 1 }]}>
