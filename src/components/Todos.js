@@ -1,24 +1,19 @@
 /* eslint-disable quotes */
 /* eslint-disable react-native/no-inline-styles */
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-} from "react-native";
-
+import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 
 export default function TodoItem({ item, pressHandler }) {
-
   return (
-    <TouchableOpacity
-      style={styles.todos}>
+    <TouchableOpacity style={styles.todos}>
       <Text style={styles.text}>{item.todo} </Text>
       <TouchableOpacity onPress={() => pressHandler(item.key)}>
-        <Text style={styles.delete}>Delete</Text>
+        <View>
+          <Image style={styles.image} source={require('../img/del-circle.png')} />
+        </View>
       </TouchableOpacity>
     </TouchableOpacity>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -38,15 +33,11 @@ const styles = StyleSheet.create({
     flex: 1,
     color: "#e2e2e2",
     fontWeight: "bold",
-    alignSelf: "center"
+    alignSelf: "center",
   },
-  delete: {
-    backgroundColor: "red",
-    opacity: 0.9,
-    color: "#e2e2e2",
-    fontWeight: "bold",
-    padding: 5,
+  image: {
+    width: 25,
+    height: 25,
     margin: 5,
-    borderRadius: 5,
-  }
-})
+  },
+});
