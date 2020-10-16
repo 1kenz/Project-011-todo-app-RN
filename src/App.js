@@ -5,7 +5,33 @@ import Header from "./components/Header";
 import AddTodo from "./components/addTodo";
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    {
+      key: 0,
+      todo: "Load The Project",
+      isDone: false,
+    },
+    {
+      key: 1,
+      todo: "Reply to Curious Coders",
+      isDone: false,
+    },
+    {
+      key: 2,
+      todo: "Clap to Coderhackers",
+      isDone: false,
+    },
+    {
+      key: 3,
+      todo: "Wait for Code47",
+      isDone: false,
+    },
+    {
+      key: 4,
+      todo: "Be ready for other Project",
+      isDone: false,
+    },
+  ]);
   const todo_num = todos.length;
 
   const pressHandler = (key) => {
