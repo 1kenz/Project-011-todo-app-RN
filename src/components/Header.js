@@ -1,37 +1,43 @@
 import React from "react";
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
   Text,
-  StatusBar,
-  TextInput,
-  TouchableOpacity,
+  Image
 } from "react-native";
 
-const Header = (props) => {
+export default function Header({ item }) {
   return (
-    <View style={{ flexDirection: "row" }}>
-      <Text style={[styles.header, { flex: 1 }]}>TODO</Text>
-      <Text style={[styles.todo_count]}>{props.num}</Text>
+    <View style={styles.header}>
+      <Image style={styles.image} source={require('../img/2.png')} />
+      <Text style={[styles.header,]}>My Todos</Text>
+      <Text style={styles.todo_count}>{item}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   header: {
-    fontSize: 40,
+    fontSize: 35,
     fontWeight: "bold",
-    color: "orange",
+    color: "#ffa801",
     margin: 5,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center"
   },
   todo_count: {
-    fontSize: 30,
-    color: "orange",
+    fontSize: 35,
+    color: "#e2e2e2",
     alignSelf: "center",
+    fontWeight: "bold",
     margin: 10,
   },
-});
+  image: {
+    width: 50,
+    height: 50,
+    marginTop: 10,
+    marginLeft: 10,
 
-export default Header;
+  }
+});
