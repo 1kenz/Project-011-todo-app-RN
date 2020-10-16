@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, FlatList, StyleSheet, Alert } from "react-native";
+import { View, Text, FlatList, StyleSheet, Alert, Image } from "react-native";
 import TodoItem from "./components/Todos";
 import Header from "./components/Header";
 import AddTodo from "./components/addTodo";
@@ -29,7 +29,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    Alert.alert("Lighthouse-Team", "Welcome to our todo app!")
+    Alert.alert("Lighthouse-Team", "Welcome to our todo app ver.0.95!")
   }, [])
 
   return (
