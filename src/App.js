@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, FlatList, StyleSheet, Alert, Image } from "react-native";
 import TodoItem from "./components/Todos";
 import Header from "./components/Header";
-import AddTodo from "./components/addTodo";
+import AddTodo from "./components/AddTodo";
 
 const App = () => {
   const [todos, setTodos] = useState([
