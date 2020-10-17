@@ -4,11 +4,10 @@ import {
   View,
   Text,
   TextInput,
-  Button,
   TouchableOpacity,
 } from "react-native";
 
-export default function AddTodo({ submitHandler }) {
+const AddTodo = ({ submitHandler, todosItem }) => {
   const [text, setText] = useState("");
 
   const changeHandler = (val) => {
@@ -43,9 +42,19 @@ export default function AddTodo({ submitHandler }) {
         }}>
         <Text style={styles.buttonText}>ADD TODO</Text>
       </TouchableOpacity>
+      <View style={styles.status}>
+        <Text style={styles.complete}>
+          Completed: {todosItem.filter((todo) => todo.isDone).length}
+        </Text>
+        <Text style={styles.remain}>
+          Remain: {todosItem.filter((todo) => !todo.isDone).length}
+        </Text>
+      </View>
     </View>
   );
-}
+};
+
+export { AddTodo };
 
 const styles = StyleSheet.create({
   input: {
@@ -67,5 +76,30 @@ const styles = StyleSheet.create({
     textAlign: "center",
     justifyContent: "center",
     color: "#e2e2e2",
+  },
+  status: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    // color: "#e2e2e2",
+  },
+  complete: {
+    backgroundColor: "#27ae60",
+    color: "#e2e2e2",
+    fontWeight: "bold",
+    paddingVertical: 10,
+    paddingHorizontal: 50,
+    borderRadius: 5,
+    marginLeft: 20,
+    marginBottom: 20,
+  },
+  remain: {
+    backgroundColor: "#3498db",
+    color: "#e2e2e2",
+    fontWeight: "bold",
+    marginRight: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 50,
+    borderRadius: 5,
+    marginBottom: 20,
   },
 });
