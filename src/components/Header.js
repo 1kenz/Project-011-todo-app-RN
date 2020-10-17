@@ -6,7 +6,7 @@ import {
   Image
 } from "react-native";
 
-export default function Header({ todoCounter }) {
+const Header = ({ todoCounter }) => {
   return (
     <View style={styles.header}>
       <Image style={styles.image} source={require('../img/2.png')} />
@@ -15,6 +15,8 @@ export default function Header({ todoCounter }) {
     </View>
   );
 };
+
+export { Header };
 
 const styles = StyleSheet.create({
   header: {
