@@ -5,18 +5,38 @@ import { Header, AddTodo, TodoItem } from './components';
 const App = () => {
   const [todos, setTodos] = useState([
     {
-      key: 0,
-      todo: "Load The Project",
-      isDone: true,
-    },
-    {
-      key: 1,
-      todo: "Reply to Curious Coders",
+      key: 10,
+      todo: "Happy coding 😎",
       isDone: false,
     },
     {
-      key: 2,
-      todo: "Clap to Coderhackers",
+      key: 9,
+      todo: "Show your completed and remain todos !",
+      isDone: false,
+    },
+    {
+      key: 8,
+      todo: "When you finish your action, press todo item and it is change done!",
+      isDone: false,
+    },
+    {
+      key: 7,
+      todo: "Todo-app ver 2.0 has new features!",
+      isDone: false,
+    },
+    {
+      key: 6,
+      todo: "Several bugs fixed!",
+      isDone: false,
+    },
+    {
+      key: 5,
+      todo: "Release Todo-app ver 2.0 !!!",
+      isDone: false,
+    },
+    {
+      key: 4,
+      todo: "Be ready for other Project",
       isDone: false,
     },
     {
@@ -25,10 +45,20 @@ const App = () => {
       isDone: false,
     },
     {
-      key: 4,
-      todo: "Be ready for other Project",
-      isDone: false,
+      key: 2,
+      todo: "Clap to Coderhackers",
+      isDone: true,
     },
+    {
+      key: 1,
+      todo: "Reply to Curious Coders",
+      isDone: true,
+    },
+    {
+      key: 0,
+      todo: "Load The Project ver 0.95",
+      isDone: true,
+    }
   ]);
 
   const todo_num = todos.length;
