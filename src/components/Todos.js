@@ -3,11 +3,11 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 
-export default function TodoItem({ item, pressHandler }) {
+export default function TodoItem({ todoItem }) {
   return (
     <TouchableOpacity style={styles.todos}>
-      <Text style={styles.text}>{item.todo} </Text>
-      <TouchableOpacity onPress={() => pressHandler(item.key)}>
+      <Text style={styles.text}>{todoItem.todo} </Text>
+      <TouchableOpacity onPress={() => pressHandler(todoItem.key)}>
         <View>
           <Image style={styles.image} source={require('../img/del-circle.png')} />
         </View>
