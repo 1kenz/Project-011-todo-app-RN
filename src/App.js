@@ -55,17 +55,17 @@ const App = () => {
   }
 
   useEffect(() => {
-    Alert.alert("Lighthouse-Team", "Welcome to our todo app ver.0.95!")
+    Alert.alert("Lighthouse-Team", "Welcome to our todo app ver 1.10!")
   }, [])
 
   return (
     <View style={styles.container}>
-      <Header item={todo_num} />
+      <Header todoCounter={todo_num} />
       <AddTodo submitHandler={submitHandler} />
       <FlatList
         data={todos}
         renderItem={({ item }) => (
-          <TodoItem item={item} pressHandler={pressHandler} />
+          <TodoItem todoItem={item} pressHandler={pressHandler} />
         )}
       />
     </View>
