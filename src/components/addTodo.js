@@ -5,6 +5,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  Dimensions,
 } from "react-native";
 
 const AddTodo = ({ submitHandler, todosItem }) => {
@@ -80,14 +81,14 @@ const styles = StyleSheet.create({
   status: {
     flexDirection: "row",
     justifyContent: "space-between",
-    // color: "#e2e2e2",
   },
   complete: {
     backgroundColor: "#27ae60",
     color: "#e2e2e2",
     fontWeight: "bold",
-    paddingVertical: 10,
-    paddingHorizontal: 50,
+    textAlign: "center",
+    padding: 10,
+    width: Dimensions.get('window').width * 0.4,
     borderRadius: 5,
     marginLeft: 20,
     marginBottom: 20,
@@ -96,9 +97,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#3498db",
     color: "#e2e2e2",
     fontWeight: "bold",
+    textAlign: "center",
+    padding: 10,
+    width: Dimensions.get('window').width * 0.4,
     marginRight: 20,
-    paddingVertical: 10,
-    paddingHorizontal: 50,
     borderRadius: 5,
     marginBottom: 20,
   },
