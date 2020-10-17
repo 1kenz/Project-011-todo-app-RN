@@ -9,7 +9,7 @@ const TodoItem = ({ todoItem, pressHandler, pressCheck }) => {
       <TouchableOpacity
         style={[
           styles.todos,
-          { backgroundColor: todoItem.isDone ? "#1e272e" : "#485460" },
+          { backgroundColor: todoItem.isDone ? "#263238" : "#485460" },
         ]}
         onPress={() => {
           return pressCheck(todoItem.key);
@@ -23,7 +23,7 @@ const TodoItem = ({ todoItem, pressHandler, pressCheck }) => {
               color: todoItem.isDone ? "#bbb" : "#e2e2e2",
             },
           ]}>
-          {todoItem.todo}{" "}
+          {todoItem.todo}
         </Text>
         <TouchableOpacity onPress={() => pressHandler(todoItem.key)}>
           <View>
@@ -44,13 +44,15 @@ const styles = StyleSheet.create({
   todos: {
     textAlign: "center",
     justifyContent: "center",
+    alignItems: "center",
     backgroundColor: "#485460",
     borderRadius: 5,
     marginLeft: 20,
     marginRight: 20,
     marginBottom: 15,
     padding: 5,
-    paddingLeft: 10,
+    paddingLeft: 15,
+    paddingHorizontal: 10,
     flexDirection: "row",
   },
   text: {
