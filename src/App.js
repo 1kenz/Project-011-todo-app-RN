@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, FlatList, StyleSheet, Alert, Image } from "react-native";
-import { Header, AddTodo, TodoItem } from './components';
+
+import { Header, AddTodo, TodoItem } from "./components";
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -16,7 +17,8 @@ const App = () => {
     },
     {
       key: 8,
-      todo: "When you finish your action, press todo item and it is change done!",
+      todo:
+        "When you finish your action, press todo item and it is change done!",
       isDone: false,
     },
     {
@@ -58,7 +60,7 @@ const App = () => {
       key: 0,
       todo: "Load The Project ver 0.95",
       isDone: true,
-    }
+    },
   ]);
 
   const todo_num = todos.length;
@@ -76,7 +78,7 @@ const App = () => {
       setTodos((prevTodos) => {
         return [
           {
-            key: todos.length,
+            key: Math.random().toString(),
             todo: text,
             isDone: false,
           },
@@ -105,6 +107,9 @@ const App = () => {
       <FlatList
         keyExtractor={(item, index) => index.toString()}
         data={todos}
+        ListEmptyComponent={() => (
+          <Text style={styles.emptyList}>Nothing to do..</Text>
+        )}
         renderItem={({ item }) => (
           <TodoItem
             todoItem={item}
@@ -123,5 +128,11 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#1e272e",
     flex: 1,
+  },
+  emptyList: {
+    color: "white",
+    alignSelf: "center",
+    margin: 20,
+    fontSize: 20,
   },
 });
