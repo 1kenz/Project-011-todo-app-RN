@@ -6,6 +6,11 @@ import { Header, AddTodo, TodoItem } from "./components";
 const App = () => {
   const [todos, setTodos] = useState([
     {
+      key: 11,
+      todo: "Happy new year 😎",
+      isDone: false,
+    },
+    {
       key: 10,
       todo: "Happy coding 😎",
       isDone: false,
@@ -97,7 +102,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    Alert.alert("Lighthouse-Team", "Welcome to our todo app ver 2.0!");
+    Alert.alert("Lighthouse-Team", "Welcome to 2021 !!!");
   }, []);
 
   return (
